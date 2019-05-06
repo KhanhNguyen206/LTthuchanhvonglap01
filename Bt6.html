@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT6</title>
+</head>
+<body>
+<script>
+    function kiemtra(x) {
+            if (x % 7 == 0)
+                return x;
+    }
+    let ketqua;
+    let count=0;
+    for (let x=0; count<30; x++) {
+        if(kiemtra(x)== x) {
+            console.log('x', x);
+            ketqua = parseInt(kiemtra(x));
+            console.log('ketqua', ketqua);
+            ketqua += ketqua;
+            count++;
+            console.log('count', count);
+        }
+    }
+    document.write(ketqua)
+</script>
+</body>
+</html>

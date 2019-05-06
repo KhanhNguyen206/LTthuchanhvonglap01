@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT3</title>
+</head>
+<body>
+<script>
+    function f(n) {
+        if(n==0||n==1){
+            return n;
+        }
+        else {
+            return f(n-1)+f(n-2);
+        }
+    }
+    let ketqua='';
+    let n=0;
+    let count=0;
+    for (let n=0; count<20 ;n++) {
+        ketqua= ketqua + f(n) +"</br>"
+        count++;
+    }
+    document.write(ketqua);
+</script>
+</body>
+</html>

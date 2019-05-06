@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT5</title>
+</head>
+<body>
+<script>
+    function f(n) {
+        if(n==0||n==1){
+            return n;
+        }
+        else {
+            return f(n-1)+f(n-2);
+        }
+    }
+    let ketqua='';
+    let n=0;
+    let count=0;
+    for (let n=0; count<100 ;n++) {
+        if(ketqua%5==0){
+            ketqua=parseInt(f(n));
+            break;
+        }
+    }
+    document.write(ketqua);
+</script>
+</body>
+</html>

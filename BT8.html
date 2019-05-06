@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT8</title>
+</head>
+<body>
+<form>
+    <fieldset style="position: absolute; top:100px; left:600px ">
+        <legend>Hãy thử đoán xem</legend>
+        <input type="button" id="choi" value="Chơi" onclick= "play()">
+    </fieldset>
+</form>
+
+<script>
+    function play() {
+        let max =parseInt(prompt("Nhập vào đây số giới hạn cao nhất trong khoảng số bạn muốn đoán"));
+        let min =parseInt(prompt("Nhập vào đây số giới hạn thấp nhất trong khoảng số bạn muốn đoán"));
+        a= Math.round(Math.random() * (max - min + 1)) + min;
+        let count=1;
+        for (count=1;count<=3;count++) {
+            let so=parseInt(prompt("Nhập vào đây đáp án của bạn:"));
+            if(so==a){
+                alert("Chúc mừng bạn đã đoán đúng đáp án")
+            }else {
+                if(so>a){
+                    alert("Số bạn đã nhập lớn hơn đáp án");
+                }else{
+                    alert("Số bạn đã nhập nhỏ hơn đáp án")
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
